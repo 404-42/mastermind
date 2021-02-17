@@ -1,5 +1,7 @@
 package mastermind;
 
+import java.awt.BorderLayout;
+
 /*
  * @author: BOTTI Joakim
  */
@@ -22,11 +24,15 @@ public class Vue extends Frame implements WindowListener {
 		new Vue();
 	}
 	
-	public void Vue() {
+	public Vue() {
+		System.out.println("lancement du programme...");
 		Modele modele = new  Modele();
 		Controler controler = new Controler();
 		
+		this.setLayout(new BorderLayout());
 		
+		VueClavier clavier = new VueClavier();
+		this.add(clavier, BorderLayout.SOUTH);
 		
 		this.addWindowListener(this);
 		this.setTitle("Mastermind");
