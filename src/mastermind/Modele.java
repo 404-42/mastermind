@@ -1,8 +1,10 @@
 package mastermind;
 
 import java.awt.Color;
+import java.util.Observable;
+import java.util.Observer;
 
-public class Modele
+public class Modele extends Observable implements Observer
 {
 	Color[] COULEURS;
 	int N_TENTATIVES;
@@ -21,7 +23,7 @@ public class Modele
 		
 		this.N_TENTATIVES = 10;
 		this.DIFFICULTE = 4;
-	
+
 		
 		this.état = Etat.EN_COURS;
 		this.combinaison = new Rangée(this.DIFFICULTE);
@@ -30,5 +32,11 @@ public class Modele
 		
 		this.propositions = new Rangée[this.N_TENTATIVES];
 		this.tentative = -1;
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// TODO Auto-generated method stub
+
 	}
 }
