@@ -32,6 +32,12 @@ public class Rangée implements Comparable<Rangée>
 		this.noirs = noirs;
 		this.blancs = blancs;
 	}
+	
+	public boolean state()
+	{
+		if (this.indiceJeton == jetons.length) return true;
+		else return false;
+	}
 
 	@Override
 	public int compareTo(Rangée arg0)

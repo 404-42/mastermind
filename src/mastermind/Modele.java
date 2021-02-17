@@ -35,8 +35,20 @@ public class Modele extends Observable implements Observer
 	}
 
 	@Override
-	public void update(Observable arg0, Object arg1) {
-		// TODO Auto-generated method stub
-
+	public void update(Observable arg0, Object arg1)
+	{
+		if (arg1 instanceof Color)
+		{
+			combinaison.addColor((Color) arg1);
+			
+			this.setChanged();
+			this.notifyObservers(combinaison);
+			
+			if (combinaison.state())
+			{
+				// Test si gagnant
+				this.combinaison = new Rangée(this.DIFFICULTE);
+			}
+		}
 	}
 }
