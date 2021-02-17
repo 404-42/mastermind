@@ -26,7 +26,7 @@ public class Vue extends Frame implements WindowListener {
 	public Vue() {
 		System.out.println("lancement du programme...");
 		Modele modele = new  Modele();
-		Controler controler = new Controler();
+		Controler controler = new Controler(model);
 		
 		this.setLayout(new BorderLayout());
 		
