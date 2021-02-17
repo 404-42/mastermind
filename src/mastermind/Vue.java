@@ -12,7 +12,6 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 
-
 public class Vue extends Frame implements WindowListener {
 	
 	
@@ -33,6 +32,9 @@ public class Vue extends Frame implements WindowListener {
 		
 		VueClavier clavier = new VueClavier();
 		this.add(clavier, BorderLayout.SOUTH);
+		
+		VuePropositions canvas = new VuePropositions();
+		this.add(canvas, BorderLayout.NORTH);
 		
 		this.addWindowListener(this);
 		this.setTitle("Mastermind");
