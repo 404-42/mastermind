@@ -16,7 +16,7 @@ public class VueClavier extends Panel implements Observer {
 	public String[] couleur = {"jaune", "vert", "bleu", "magenta", "rouge", "orange", "blanc", "noir"};
 	
 	
-	public VueClavier() {
+	public VueClavier(Controler controler) {
 		
 		for (int i=0; i < couleur.length; i++) {
 			Button tmp = new Button(couleur[i]);
@@ -37,5 +37,7 @@ public class VueClavier extends Panel implements Observer {
 		// arg1 = class ranger; 
 		// if ranger.state() == false => metre couleur en bas
 		// else ecrire sur la prochaine ligne en partant du haut
+		
+		//if (arg1.)
 	}
 }

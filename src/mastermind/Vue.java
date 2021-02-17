@@ -30,7 +30,7 @@ public class Vue extends Frame implements WindowListener {
 		
 		this.setLayout(new BorderLayout());
 		
-		VueClavier clavier = new VueClavier();
+		VueClavier clavier = new VueClavier(controler);
 		this.add(clavier, BorderLayout.SOUTH);
 		
 		VuePropositions canvas = new VuePropositions();
