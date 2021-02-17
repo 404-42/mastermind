@@ -2,9 +2,8 @@ package mastermind;
 
 import java.awt.Color;
 import java.util.Observable;
-import java.util.Observer;
 
-public class Controler extends Observable implements Observer
+public class Controler extends Observable
 {
 	Modele modl;
 
@@ -14,8 +13,7 @@ public class Controler extends Observable implements Observer
 		this.addObserver(modele);
 	}
 
-	@Override
-	public void update(Observable arg0, Object arg1)
+	public void update(Object arg1)
 	{
 		if (arg1 instanceof Color)
 		{
