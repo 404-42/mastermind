@@ -4,10 +4,12 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Shape;
+import java.awt.geom.Ellipse2D;
 import java.util.Observable;
 import java.util.Observer;
 
-public class VuePropositions extends Canvas implements Observer {
+public class VuePropositions extends Canvas{
 	
 	public VuePropositions() {
 		this.setBackground (Color.GRAY);
@@ -15,15 +17,6 @@ public class VuePropositions extends Canvas implements Observer {
 	}
 	
 	public void paint(Graphics g) {
-		Graphics2D g2;
-        g2 = (Graphics2D) g;
-	}
-	
-	
-
-	@Override
-	public void update(Observable arg0, Object arg1) {
-		// TODO Auto-generated method stub
 		
 	}
 }

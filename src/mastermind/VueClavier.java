@@ -8,7 +8,7 @@ import java.awt.event.ItemListener;
 import java.util.Observable;
 import java.util.Observer;
 
-public class VueClavier extends Panel implements Observer {
+public class VueClavier extends Panel {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -28,16 +28,5 @@ public class VueClavier extends Panel implements Observer {
 		        }
 		    });
 		}
-	}
-	
-	
-
-	@Override
-	public void update(Observable arg0, Object arg1) {
-		// arg1 = class ranger; 
-		// if ranger.state() == false => metre couleur en bas
-		// else ecrire sur la prochaine ligne en partant du haut
-		
-		//if (arg1.)
 	}
 }

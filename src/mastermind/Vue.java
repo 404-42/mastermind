@@ -10,9 +10,11 @@ import java.awt.BorderLayout;
 import java.awt.Frame;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.Observable;
+import java.util.Observer;
 
 
-public class Vue extends Frame implements WindowListener {
+public class Vue extends Frame implements WindowListener, Observer {
 	
 	
 	private static final long serialVersionUID = 1L;
@@ -83,5 +85,19 @@ public class Vue extends Frame implements WindowListener {
 	public void windowOpened(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	@Override
+	public void update(Observable arg0, Object arg1) {
+		// arg1 = class rangée; 
+		// if ranger.state() == false => metre couleur en bas
+		// else ecrire sur la prochaine ligne en partant du haut
+		Rangée ranger = (Rangée) arg1;
+		
+		if (!ranger.state()) {
+		
+		} else {
+			
+		}
 	}
 }
