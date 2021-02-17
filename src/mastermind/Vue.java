@@ -23,7 +23,7 @@ public class Vue extends Frame implements WindowListener {
 	public static void main(String[] args) {
 		new Vue();
 	}
-	
+
 	public Vue() {
 		System.out.println("lancement du programme...");
 		Modele modele = new  Modele();
